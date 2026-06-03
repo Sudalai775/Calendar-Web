@@ -1,47 +1,56 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Calendar</title>
-    <link rel="stylesheet" href="styles.css">
-
-    
-    <div class="container">
-        <div class="heading-container">
-           
-        </div>
-
-        <div class="card">
-           <center> <h1 class="calendar-heading">BCA Timetable</h1></center>
-            <div class="calendar-toolbar">
-                <button id="prevMonth" class="month-btn">◄</button>
-                <div id="month" class="current-month"></div>
-                <button id="nextMonth" class="month-btn">►</button>
-                <button id="todayButton" class="todayButton">Today</button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Academic Scheduler for BCA Department - Interactive calendar with class schedules">
+    <meta name="author" content="BCA Department">
+    <title>Academic Scheduler | BCA Department</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar-card">
+        <div class="card-header">
+            <div class="brand-title">
+                📅 Academic Scheduler
+                <span class="brand-badge">BCA DEPT</span>
             </div>
+            <button id="todayBtn" class="btn-primary">Today</button>
+        </div>
+        <div class="toolbar">
+            <div class="nav-group">
+                <button id="prevMonth" class="btn-icon" aria-label="Previous Month">◀</button>
+                <button id="nextMonth" class="btn-icon" aria-label="Next Month">▶</button>
+            </div>
+            <div id="currentDateLabel" class="current-date-label">June 2026</div>
+        </div>
+        <div class="calendar-grid">
             <div class="weekdays">
-                <div class="weekday-name">Sun</div>
-                <div class="weekday-name">Mon</div>
-                <div class="weekday-name">Tue</div>
-                <div class="weekday-name">Wed</div>
-                <div class="weekday-name">Thu</div>
-                <div class="weekday-name">Fri</div>
-                <div class="weekday-name">Sat</div>
+                <div class="weekday-label">SUN</div>
+                <div class="weekday-label">MON</div>
+                <div class="weekday-label">TUE</div>
+                <div class="weekday-label">WED</div>
+                <div class="weekday-label">THU</div>
+                <div class="weekday-label">FRI</div>
+                <div class="weekday-label">SAT</div>
             </div>
-            <div id="days" class="calendar-days"></div>
+            <div id="daysGrid" class="days-grid"></div>
         </div>
+    </div>
 
-        <div id="timetable" class="timetable hidden">
-            <button id="back" class="btn">Back</button>
-            <div id="selectedDate"></div>
-            <div id="timetableBody"></div>
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Schedule Details</h2>
+                <button id="closeModal" class="close-btn" aria-label="Close">✕</button>
+            </div>
+            <div id="modalBody" class="modal-body"></div>
         </div>
-
-        <table id="holiday" class="hidden">
-            <tbody id="holidayBody"></tbody>
-        </table>
     </div>
 
     <script src="script.js"></script>
-
-
-</body></html>
+</body>
+</html>
