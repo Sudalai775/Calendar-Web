@@ -22,7 +22,7 @@ A modern, responsive academic scheduling application that helps students view ti
 
 ### Demo Video
 
-calendar web.mp4
+[calendar web.mp4](https://github.com/Sudalai775/Calendar-Web/blob/main/calendar%20web.mp4)
 
 
 After uploading, GitHub will automatically allow visitors to view and download the demo video directly from the repository.
