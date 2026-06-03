@@ -22,9 +22,11 @@ A modern, responsive academic scheduling application that helps students view ti
 
 ### Demo Video
 
+Upload your `calendar web.webm` file to the repository and place it in the project root.
 
-
+```text
 calendar web.webm
+```
 
 After uploading, GitHub will automatically allow visitors to view and download the demo video directly from the repository.
 
